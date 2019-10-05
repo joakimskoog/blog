@@ -1,0 +1,33 @@
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  background:$light-theme-background;
+  color: $primary-color;
+  font-family:'Lora',serif;
+  font-weight:normal;
+  font-style:normal;
+  line-height:1.5;
+
+  &.dark-theme {
+    background:$dark-theme-background;
+    color:$dark-theme-color;
+  }
+}
+
+.wrapper {
+  display:flex;
+  flex-direction: column;
+  min-height:100vh;
+
+  > *{
+      padding:1rem;
+  }
+}
+
+main {
+  flex-grow: 1;
+}

@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    {{ partial "head.html" . }}
+</head>
+
+<body>
+    <div class="wrapper">
+        {{ partial "navigation.html" . }}
+        {{ block "main" . }}{{ end }}
+        {{ partial "footer.html" . }}
+    </div>
+
+    {{ $app := resources.Get "js/app.js" }}
+    {{ $secureJS := slice $app  | resources.Concat "bundle.js" | resources.Minify | resources.Fingerprint "sha512" }}
+    <script type="text/javascript" src="{{ $secureJS.RelPermalink }}"
+        integrity="{{ $secureJS.Data.Integrity }}"></script>
+        <!-- Place this tag in your head or just before your close body tag. -->
+    <script async defer src="https://buttons.github.io/buttons.js"></script>
+</body>
+
+</html>

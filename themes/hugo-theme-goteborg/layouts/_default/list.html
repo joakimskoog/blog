@@ -1,0 +1,11 @@
+{{ define "main" }}
+
+{{ partial "header.html" . }}
+
+<div class="tags-header">
+        <h2>Posts tagged - "{{ .Title }}"</h2>
+    </div>
+<main id="content" aria-role="main">
+   {{ partial "posts.html" . }}
+</main>
+{{ end }}

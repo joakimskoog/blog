@@ -1,0 +1,64 @@
+h1,h2,h3,h4,h5,h6 {
+    font-family:'Source Sans Pro', sans-serif;
+    font-weight:700;
+    font-style:normal;
+    text-rendering: optimizeLegibility;
+    margin-top:0;
+    margin-bottom:$header-margin-bottom;
+    line-height:1.4;
+}
+
+@each $header, $map in $headers {
+    #{$header} {
+        font-size:map-get($map, font-size-default);
+
+        @media screen and(min-width:$screen-medium) {
+            font-size:map-get($map, font-size-large);
+        }
+    }
+}
+
+p {
+    margin-top:$paragraph-margin-top;
+    margin-bottom:$paragraph-margin-bottom;
+}
+
+ol, ul {
+    margin-top:$list-margin-top;
+    margin-bottom:$list-margin-bottom;
+    padding-left:$list-padding-left;
+}
+
+hr {
+    border:1px solid $black;
+    margin-bottom:$margin-bottom-base;
+}
+
+a {
+    color:$link-color;
+    background: $link-background;
+    text-decoration: $link-decoration;
+    border-bottom:$link-border-bottom;
+
+    &:hover {
+        color:$link-color-hover;
+        background:$link-background-hover;
+    }
+}
+
+.link-clean {
+    border-bottom:none;
+}
+
+.link-no-hover {
+    &:hover {
+        color:$link-color;
+        background:$link-background;
+    } 
+}
+
+h1,h2,h3,h4,h5,h6 {
+    a {
+        @extend .link-clean;
+    }
+}

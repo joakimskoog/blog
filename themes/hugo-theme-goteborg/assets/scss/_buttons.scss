@@ -1,0 +1,16 @@
+.button {
+    display:inline-block;
+    font-weight: $button-font-weight;
+    line-height: $button-line-height;
+    color: $black;
+    text-align:center;
+    vertical-align: middle;
+    background-color:transparent;
+    padding: $button-padding-y $button-padding-x;
+    border:$button-border-width solid $black;
+
+    &:hover {
+        color:$white;
+        background-color:$black;
+    }
+}

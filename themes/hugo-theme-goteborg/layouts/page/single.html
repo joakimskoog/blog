@@ -1,0 +1,11 @@
+{{ define "main" }}
+
+{{ partial "header.html" . }}
+
+<main id="content" aria-role="main">
+        <article class="post-content">
+                {{ .Content }}
+        </article>
+</main>
+
+{{ end }}

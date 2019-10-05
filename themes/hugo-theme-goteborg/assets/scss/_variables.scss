@@ -1,0 +1,83 @@
+@charset "UTF-8";
+
+
+/* Colors */
+$white: #fff;
+$black: #000;
+
+$primary-color: #161209;
+
+/* Common padding, margins, borders and more */
+
+$margin-top-base:0;
+$margin-bottom-base:1rem;
+
+$border-radius: .25rem;
+
+$line-height-base: 1.5;
+
+
+/* Light theme */
+$light-theme-background: $white;
+$light-theme-color: #222;
+$light-theme-color-highlight: #2d96bd;
+
+/* Dark theme */
+$dark-theme-background: #292a2d;
+$dark-theme-color: #a9a9b3;
+$dark-theme-color-highlight: $white;
+
+/* Screen sizes used for breakpoints in media queries */
+$screen-small: 576px;
+$screen-medium: 768px;
+$screen-large: 992px;
+$screen-xl: 1200px;
+
+/* Links */
+$link-color: $primary-color;
+$link-background: transparent;
+$link-color-hover: $white;
+$link-background-hover:$black;
+$link-decoration: none;
+$link-border-bottom: $black 1px dashed;
+
+
+/* Typography */
+$font-size-base: 1rem;
+$font-weight-normal: 500;
+$font-weight-bold: 600;
+
+
+$h1-font-size:$font-size-base*1.875;
+$h1-font-size-large:$font-size-base*4.625;
+
+$h2-font-size:$font-size-base*1.75;
+$h2-font-size-large:$font-size-base*2.25;
+
+$header-margin-bottom:$margin-bottom-base/2;
+
+$headers:(
+    h1: (
+        font-size-default:$h1-font-size,
+        font-size-large:$h1-font-size-large
+    ),
+    h2: (
+        font-size-default:$h2-font-size,
+        font-size-large:$h2-font-size-large
+    ),
+);
+
+$paragraph-margin-top: $margin-top-base;
+$paragraph-margin-bottom: $margin-bottom-base;
+
+/* Lists */
+$list-margin-top: $margin-top-base;
+$list-margin-bottom:$margin-bottom-base;
+$list-padding-left: 1.2rem;
+
+/* Buttons */
+$button-line-height: $line-height-base;
+$button-padding-x:1.5rem;
+$button-padding-y: .375rem;
+$button-border-width: .1875rem;
+$button-font-weight:$font-weight-bold;

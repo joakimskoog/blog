@@ -1,0 +1,60 @@
+baseURL = "https://joakimskoog.github.io/"
+languageCode = "en-us"
+title = "Joakim Skoog"
+
+theme = "hugo-theme-goteborg"
+enableRobotsTXT = true
+
+[permalinks]
+  posts = "/:title/"
+
+[author]
+  name = "Joakim Skoog"
+  description = "Software Developer @ Nelly.com"
+
+[params]
+	homeSubtitle = "Software."
+	 mainSections = ["post", "posts"]
+
+	[[params.social]]
+		icon = "github"
+		url = "https://github.com/joakimskoog"
+		title = "Github profile - @joakimskoog"
+	[[params.social]]
+		icon = "envelope"
+		url = "mailto:hello@joakimskoog.com"
+		title = "mailto:hello@joakimskoog.com"
+	[[params.social]]
+		icon = "twitter"
+		url = "https://twitter.com/j_skoog"
+		title = "Twitter profile - @j_skoog"
+	[[params.social]]
+		icon = "rss"
+		url = "https://joakimskoog.com/rss"
+		title = "RSS Feed - joakimskoog.com/rss/"
+
+
+
+[[menu.main]]
+name = "Home"
+url = "/"
+weight = 1
+
+[[menu.main]]
+identifier = "about"
+name = "About"
+url = "/about"
+weight = 2
+
+[[menu.main]]
+name = "Projects"
+url = "/projects"
+weight = 3
+
+[sitemap]
+  changefreq = "monthly"
+  filename = "sitemap.xml"
+  priority = 0.5
+
+[taxonomies]
+  tag = "tags"

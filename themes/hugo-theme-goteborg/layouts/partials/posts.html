@@ -1,0 +1,20 @@
+<section class="posts">
+    {{ range (where .Pages "Type" "in" site.Params.mainSections).ByPublishDate.Reverse }}
+    <article class="post">
+        <div class="post-container">
+            <section class="post-header">
+                <h2 class="post-title">
+                    <a href="{{ .Permalink }}" class="clean-link">{{ .Title }}</a>
+                </h2>
+                <time class="post-date" datetime="{{ .Date.Format "2006-01-02" }}">
+                    {{ .Date.Format "2 Jan 2006"}}
+                </time>
+            </section>
+            <section class="post-description">
+                <p>{{ .Summary }}</p>
+            </section>
+            <a href="{{ .Permalink }}" class="button">Read more</a>
+        </div>
+    </article>
+    {{ end }}
+</section>

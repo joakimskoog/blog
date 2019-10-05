@@ -1,0 +1,14 @@
+<a href="#" class="menu-button burger-wrapper clean-link">
+    <hr class="burger burger-top">
+    <hr class="burger burger-middle">
+    <hr class="burger burger-bottom">
+</a>
+<nav class="navigation">
+    <ul class="menu">
+        {{ range .Site.Menus.main }}
+        <li>
+            <a href="{{ .URL }}">{{ .Name }}</a>
+        </li>
+        {{ end }}
+    </ul>
+</nav>
