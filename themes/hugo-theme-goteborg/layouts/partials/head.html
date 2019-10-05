@@ -1,12 +1,27 @@
 <meta charset="UTF-8">
-<meta http-equiv="X-UA-Compatible" content="ie=edge">
+{{ if .IsHome }}
+<title>{{ .Site.Title }} - {{ .Site.Params.SubTitle }}</title>
+{{ else }}
+<title>{{ .Title }} - {{ .Site.Title }}</title>
+{{ end }}
+
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 <meta name="author" content="{{ .Site.Author.name }}">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+{{ if or (.IsHome) (ne .Page.Type "page") }}
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="{{ .Title }}">
+<meta name="twitter:url" content="{{ .Permalink }}">
+
 
 {{ if .IsHome }}
-<title>{{ .Site.Title }} | {{ .Site.Params.SubTitle }}</title>
+<meta name="twitter:description" content="{{ .Site.Params.SubTitle }}">
 {{ else }}
-<title>{{ .Title }} | {{ .Site.Title }}</title>
+<meta name="twitter:description" content="{{ .Summary }}">
+{{ end }}
+
+
 {{ end }}
 
 <link rel="canonical" href="{{ .Permalink }}" />
