@@ -13,8 +13,8 @@ enableRobotsTXT = true
   description = "Software Developer @ Nelly.com"
 
 [params]
-	homeSubtitle = "Software."
-	 mainSections = ["post", "posts"]
+	subTitle = "Software Developer, building stuff with code"
+	mainSections = ["post", "posts"]
 
 	[[params.social]]
 		icon = "github"
