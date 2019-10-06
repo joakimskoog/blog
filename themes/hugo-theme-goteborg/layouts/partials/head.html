@@ -17,11 +17,11 @@
 <meta name="twitter:description" content="{{ $metaDescription }}">
 {{ end }}
 <meta name="description" content="{{ $metaDescription }}">
-<meta name="og:title" content="{{ .Title }}">
-<meta name="og:type" content="website">
-<meta name="og:url" content="{{ .Permalink }}">
-<meta name="og:description" content="{{ $metaDescription }}">
-<meta name="og:site_name" content="{{ .Site.Author.name }}">
+<meta property="og:title" content="{{ .Title }}">
+<meta property="og:type" content="website">
+<meta property="og:url" content="{{ .Permalink }}">
+<meta property="og:description" content="{{ $metaDescription }}">
+<meta property="og:site_name" content="{{ .Site.Author.name }}">
 
 <link rel="canonical" href="{{ .Permalink }}" />
 <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
